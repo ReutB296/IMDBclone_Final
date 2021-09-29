@@ -1,0 +1,74 @@
+.App {
+  display: grid;
+  grid-template-columns: auto 1280px auto;
+  grid-template-rows: 55px 650px auto 100px;
+  grid-template-areas:
+    "header   header   header"
+    "trailers trailers trailers"
+    "empty    featured empty-r"
+    "empty    footer   empty-r";
+  background-color: black;
+  min-height: 100vh;
+}
+
+.font-link {
+  font-family: "Roboto", sans-serif;
+}
+
+body,
+html {
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: black;
+}
+
+.grid-header {
+  grid-area: header;
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  z-index: 5;
+  /* height: 60px;
+  position: fixed;
+  left: 10%;
+  z-index: 5; */
+}
+
+.grid-trailers {
+  grid-area: trailers;
+  display: flex;
+  width: fit-content;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.grid-featured {
+  grid-area: featured;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-trailers .upNext {
+  width: 403px;
+  height: 496px;
+}
+
+.grid-MovieToday {
+  grid-area: trailers;
+  width: fit-content;
+  margin: auto;
+}
+
+.grid-signIn {
+  grid-area: trailers;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(185, 185, 182, 1) 16%,
+    rgba(192, 192, 188, 1) 40%,
+    rgba(207, 206, 202, 1) 63%,
+    rgba(226, 225, 220, 1) 82%,
+    rgba(227, 226, 221, 1) 100%
+  );
+}

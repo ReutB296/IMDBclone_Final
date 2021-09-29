@@ -1,0 +1,166 @@
+.createAccount-container{
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial,sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.createAccount-container .logoImg{
+    width: 107px;
+    height: 52px;
+}
+
+.createAccount-container h1{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.createAccount-container form{
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    padding: 14px 18px;
+    font-size: 13px;
+    border: 1px #ddd solid;
+    width: 348px;
+    height: 462px;
+    margin-top: 10px;
+}
+
+.createAccount-container form .form-divider{
+    margin-top: 20px;
+    padding-top: 40px;
+    height: 44px;
+    width: 312px;
+    background: linear-gradient(to bottom,rgba(0,0,0,.14),rgba(0,0,0,.03) 3px,transparent);
+}
+
+.createAccount-container form .form-divider::after{
+    background: linear-gradient(to right,#fff,rgba(255,255,255,0),#fff);
+    content: "";
+    display: block;
+    width: 100%;
+    height: 44px;
+    background-color: transparent;
+    margin-top: -60px;
+}
+
+.createAccount-container form label{
+    font-weight: 700;
+}
+
+.createAccount-container form input{
+    width: 312px;
+    height: 31px;
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    padding-left: 5px;
+}
+
+.createAccount-container form input:focus{
+    border-color: #e77600;
+    box-shadow: 0 0 3px 2px rgb(228 121 17 / 50%);
+    outline: 0;
+}
+
+.createAccount-container form button{
+    width: 312px;
+    height: 31px;
+    background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+    border-color: #a88734 #9c7e31 #846a29;
+    border-style: solid;
+    border-width: 1px;
+    color: #111;
+    border-radius: 3px;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.createAccount-container form button:hover{
+    box-shadow: 0 1px 0 rgba(255,255,255,.4) inset;
+}
+
+.createAccount-container .a-divider-inner{
+    height: 44px;
+    width: 312px;
+    margin-top: 30px;
+    background: linear-gradient(to bottom,rgba(0,0,0,.14),rgba(0,0,0,.03) 3px,transparent);
+    font-size: 11px;
+    color: #555;
+    font-family: Arial,sans-serif;
+    padding-top: 30px;
+   text-align: center;
+}
+
+.createAccount-container .a-divider-inner::after{
+    display: block;
+    height: 44px;
+    background: linear-gradient(to right,#fff,rgba(255,255,255,0),#fff);
+    content: "";
+    margin-top: -80px;
+   
+}
+
+
+.createAccount-container .fail{
+    border: 1px solid #c40000;
+    border-radius: 4px;
+    width: 312px;
+    height: 52px;
+    text-align: center;
+    padding-top: 7px;
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+    margin-top:20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.createAccount-container .fail i{
+    background-image: url(https://m.media-amazon.com/images/S/sash/mPGmT0r6IeTyIee.png);
+    background-position: -247px -37px;
+    width: 30px;
+    height: 27px;
+    display: block;
+    margin-top: -25px;
+    margin-left: 20px;
+}
+
+.successContainer {
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: relative;
+    z-index: 999;
+    bottom: 300px;
+    background-color: white;
+    height: 210px;
+    width: 443px;
+}
+
+
+.successContainer .success{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+    margin-top:20px;
+}
+
+.successContainer .success2{
+    font-size: 15px;
+    width: fit-content;
+    margin-left: 135px;
+}
+
+.successContainer .loading-gif{
+   width: 30%;
+   margin-left: 150px;
+}

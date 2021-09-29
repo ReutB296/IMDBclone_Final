@@ -1,0 +1,193 @@
+.container .reviews-container{
+    min-height: 36vh; 
+    width: 100vw;
+    background-color: white;
+    position: absolute;
+    top: 600px;
+    left: 0;
+    overflow: visible;
+   
+  }
+
+  .reviews-container .reviews-section .reviewAdded{
+    color: white;
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-family: Verdana, sans-serif;
+  }
+  
+  .reviews-container .reviews-section{
+    display: flex;
+    flex-direction: column;
+    width:100vw;
+    padding-left: 35%;
+    background-color: #1a1a1a;
+    color: white;
+  }
+
+  .reviews-container .reviews-section h2{
+    margin-bottom: 50px;
+    margin-top: 30px;
+    font-size: 28px;
+  
+  }
+  
+  .reviews-container .reviews-section h3{
+  font-family: Roboto;
+  font-size: 21px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  }
+  
+  .reviews-container .reviews-section h2::before{
+    background: #f5c518;
+    content: '';
+    margin-left: -.75rem;
+    position: absolute;
+    height: 40px;
+    width: 4px;
+  }
+  
+  
+  .reviews-container .reviews-section form{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 30px;
+  
+  }
+
+  .reviews-container .reviews-section form label{
+    font-weight: 700;
+  }
+  
+  .reviews-container .reviews-section form input{
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    padding-left: 5px;
+  }
+
+  .reviews-container .reviews-section form input:focus, .reviews-container .reviews-section form select:focus, .reviews-container .reviews-section form textarea:focus{
+    border-color: #e77600;
+    box-shadow: 0 0 3px 2px rgb(228 121 17 / 50%);
+    outline: 0;
+  }
+  
+  .reviews-container .reviews-section form .score{
+    width: fit-content;
+    height: 31px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .reviews-container .reviews-section form .title{
+    width: 300px;
+    height: 31px;
+    position: absolute;
+    margin-left: 140px;
+    margin-top: 80px;
+  }
+
+  .reviews-container .reviews-section form .titleLabel{
+    position: absolute;
+    margin-left: 140px;
+    margin-top: 57px;
+  }
+  
+  .reviews-container .reviews-section form .comments{
+    width: 442px;
+    height: 80px;
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    overflow: auto;
+  }
+  
+  .reviews-container .reviews-section form button{
+    width: 112px;
+    height: 31px;
+    background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+    border-color: #a88734 #9c7e31 #846a29;
+    border-style: solid;
+    border-width: 1px;
+    color: #111;
+    border-radius: 3px;
+    text-decoration: none;
+    text-align: center;
+  }
+
+.reviews-container .reviews-list{
+  width: 800px;
+  margin: auto;
+  border-radius: 12px;
+  border: 1px solid #E8E8E8;
+  margin-bottom: 7px;
+  padding: 10px 12px;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+
+.reviews-container .usersReviews{
+  padding-bottom: 30px;
+  padding-top: 30px;
+  font-size: 28px;
+  position: relative;
+  margin: auto;
+  width: fit-content;
+}
+
+.reviews-container .usersReviews::before{
+  background: #f5c518;
+  content: '';
+  margin-left: -.75rem;
+  position: absolute;
+  height: 40px;
+  width: 4px;
+}
+
+.paginationBttns {
+  width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.paginationBttns a {
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid #f5c518;
+  color: black;
+  cursor: pointer;
+}
+
+.paginationBttns a:hover {
+  color: white;
+  background-color: #f5c518
+  ;
+}
+
+.paginationActive a {
+  color: white;
+  background-color: #f5c518;
+}
+
+.paginationDisabled a {
+  color: white;
+  background-color: grey;
+}
+
+.paginationDisabled a:hover{
+  background-color: grey;
+}
+
+  
+
+  
+  

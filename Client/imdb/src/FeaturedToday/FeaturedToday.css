@@ -1,0 +1,128 @@
+.section-header {
+  color: #f5c518;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.featured-container a {
+  color: #f5c518;
+  text-decoration: none;
+  width: fit-content;
+  z-index: 100;
+}
+
+.featured-container a:hover {
+  color: rgb(245, 197, 24, 0.9);
+}
+
+.featured-container {
+  grid-area: featured;
+  display: flex;
+  flex-direction: column;
+}
+
+.fan-favorites-card-bottom {
+  width: 200px;
+  height: 180px;
+  background-color: rgb(20, 20, 20);
+  color: white;
+  margin: 0;
+  padding: 10px;
+  position: relative;
+}
+
+.card-wrapper {
+  background-color: tomato;
+}
+
+.carousel-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-card-rating {
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-card-rating img {
+  width: 10%;
+  height: 35%;
+}
+
+.carousel-card-movie-title {
+  font-size: 105%;
+  font-weight: 400;
+}
+
+.watch-list-container {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+span.watch-list {
+  color: #5799ef;
+  background-color: #292929;
+  font-size: 85%;
+  font-weight: 700;
+  display: block;
+  padding: 8px;
+  border-radius: 3px;
+  width: 180px;
+  margin-bottom: 10px;
+
+  display: flex;
+  justify-content: center;
+}
+
+span.watch-list:hover {
+  cursor: pointer;
+}
+
+span.watch-list:active {
+  color: white;
+}
+
+span.plus {
+  margin-right: 5px;
+}
+
+span.trailer {
+  font-size: 95%;
+  font-weight: 700;
+}
+
+.trailer-container {
+  display: flex;
+}
+
+.button {
+  position: absolute;
+
+  height: fit-content;
+  width: fit-content;
+  top: 220px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  cursor: pointer;
+  background: rgba(18, 18, 18, 0.45);
+  opacity: 1;
+}
+.button {
+  width: 44px;
+  height: 60px;
+}
+
+.buttonR {
+  left: 5px;
+}
+.buttonL {
+  right: 7px;
+  transform: scaleX(-1);
+}

@@ -1,0 +1,18 @@
+.wish-list-container {
+  width: 20%;
+  height: 30px;
+  /* background: rgba(0, 0, 0, 0.5); */
+  /* background-color: rgb(70, 70, 62, 0.5); */
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  right: 0;
+
+  z-index: 2;
+}
+
+.add-to-wishlist {
+  background: transparent;
+  border: none;
+}
