@@ -1,4 +1,4 @@
-.container .reviews-container{
+ .reviews-container{
     min-height: 36vh; 
     width: 100vw;
     background-color: white;
@@ -185,6 +185,12 @@
 
 .paginationDisabled a:hover{
   background-color: grey;
+}
+
+@media (max-width: 1200px){
+  .reviews-container{
+    top: 720px;
+  }
 }
 
   

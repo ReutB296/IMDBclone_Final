@@ -56,8 +56,14 @@ const theme = {
         }
         ${SignIn}{
             display:inherit;
+            margin-left:0;
+        }
+        .watchlist-button{
+            display: none;
         }
     }
+
+   
  `;
 
  const BurgerContainer = styled.div
