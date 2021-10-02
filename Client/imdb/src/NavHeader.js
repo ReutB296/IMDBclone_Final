@@ -18,11 +18,25 @@ const theme = {
     fontSize: "14px",
  }
 
+ const IMDbPro = styled.div`
+ margin-left: 10px;
+ `;
+
+ const Watchlist = styled.div`
+ color: white;
+ font-weight: 600;
+ font-size:  ${props => props.theme.fontSize};
+ `;
+
+ const SignIn = styled(Watchlist)`
+ margin-left: 20px;
+ `;
+
  const HeaderContainer = styled.header
  `height: 100%;
- width: 100%;
- background-color: #121212;
+ max-width: 1280px;
  display: flex;
+ flex: 1;
  align-items: center;
  gap: 10px;
  padding: 10px;
@@ -32,6 +46,18 @@ const theme = {
         a{
             text-decoration: none;
         }
+
+    @media screen and (max-width: 1024px){
+        ${IMDbPro}{
+            display: none;
+        }
+        ${Watchlist}{
+            display: none;
+        }
+        ${SignIn}{
+            display:inherit;
+        }
+    }
  `;
 
  const BurgerContainer = styled.div
@@ -57,7 +83,7 @@ const theme = {
 
 
  const SearchTyping = styled.div`
- width: 662px;
+ flex: 1;
  `;
 
  const Ul = styled.ul
@@ -66,10 +92,9 @@ const theme = {
  color: white;
  z-index: 100;
  list-style: none;
- width: 782px;
+ width: 760px;
  padding:0;
  margin: 0;
- left: 0;
  top:100%;
 
      img{
@@ -121,16 +146,17 @@ background-color: transparent;
  `;
 
  const SearchArea = styled.div`
+ flex: 1;
  height: 95%;
  border-radius: 4px;
  `;
 
  const SearchContainer = styled.div`
- width: 782px;
+ display:flex;
+ align-items:stretch;
  height: 100%;
  background-color: rgb(255, 255, 255);
  border-radius: 6px;
- position: relative;
  `;
 
  const Separator = styled.div`
@@ -140,25 +166,13 @@ background-color: transparent;
  margin: 0px 0.5rem;
  `;
 
- const Watchlist = styled.div`
- color: white;
- font-weight: 600;
- font-size:  ${props => props.theme.fontSize};
- `;
-
- const SignIn = styled(Watchlist)`
- margin-left: 20px;
- `;
-
- const IMDbPro = styled.div`
- margin-left: 10px;
- `;
 
  const NavSearchForm = styled.form.attrs(props => ({
       method: "get",
       action: "/find",
 }))
  `display: flex;
+ flex:1;
  height: 100%;
  box-shadow: inset 0 0 0 2px #f5c518;
  border-radius: 4px;
@@ -184,7 +198,7 @@ background-color: transparent;
  const ButtonText = styled.div
  `font-size:  ${props => props.theme.fontSize};
  font-weight: 600;
- padding-top: 5px;
+ padding-top: 3px;
  `;
 
 const UserName = styled.div
@@ -214,7 +228,6 @@ export default function NavHeader() {
     const [value, setValue] = useState('');
     const [SearchedItems, setSearchedItems] = useState([]);
 
-    console.log("user from nav", user)
 
     useEffect(() => {
         const handleClick =  e=> {

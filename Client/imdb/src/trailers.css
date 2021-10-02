@@ -1,19 +1,24 @@
 .carousel {
   grid-area: trailers;
-  width: 850px;
-  height: 547px;
+  max-width: 850px;
+  flex: 1;
 }
 
 /* Added to prevent carousel below overlapping -------------------------*/
 div.active.carousel-item {
-  height: 600px;
+  max-height: 600px;
+}
+.carousel-inner{
+  width: 100%;
+  height: 100%;
 }
 
 .carousel-inner .poster {
-  width: 165px;
-  height: 244px;
+  /* width: 24%;
+  min-width: 60px; */
+  max-width: 165px;
+  /* max-height: 244px; */
   position: relative;
-  bottom: 10rem;
   right: inherit;
   padding: 0;
   left: 2%;
@@ -28,6 +33,7 @@ div.active.carousel-item {
 }
 
 .carousel-inner .title {
+  text-align: inherit;
   left: 10%;
   top: 63%;
   font-size: 34px;
@@ -118,8 +124,8 @@ div.active.carousel-item {
   min-width: 0px;
   gap: 5px;
   position: absolute;
-  bottom: 140px;
-  left: 200px;
+  bottom: -100px;
+  left: 0;
   align-items: center;
 }
 
@@ -131,3 +137,79 @@ div.active.carousel-item {
     color: white;
     font-size: 20px;
 }
+
+.w-100{
+  max-width: 100%!important;
+}
+
+.playContainer{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+  align-self: flex-end;
+  padding-bottom: 20px;
+}
+
+
+
+@media screen and (min-width: 769px) and (max-width: 1200px){
+  .carousel-inner .poster {
+   width: 40%;
+   max-width: 150px;
+  }
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+  .carousel-inner .poster {
+    width: 30%;
+    min-width: 60px;
+    max-width: 165px;
+   }
+  }
+
+@media screen and (max-width: 480px){
+  .carousel .carousel-control-next, .carousel .carousel-control-prev{
+      display: none;
+  }
+  .carousel-inner .poster {
+      width: 24%;
+      min-width: 60px; 
+      max-height: 244px;
+  }
+
+  .carousel-inner .title{
+    padding-top: 0;
+  }
+
+  .playContainer{
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+  }
+
+  .play-icon svg{
+    width: 50px;
+    height: 50px;
+  }
+
+  .carousel-inner .title p:nth-child(1){
+    font-size: 20px;
+  }
+
+  .carousel-inner .title p:nth-child(2){
+    font-size: 14px;
+    padding: 0;
+  }
+
+  .plus{
+    display: none;
+  }
+
+  .carousel-inner .poster::before{
+    display: none;
+  }
+}
+
+

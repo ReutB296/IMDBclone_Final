@@ -8,7 +8,7 @@ export const MoviesContext = React.createContext({
 export default function MoviesProvider({ children }) {
   const [movies, setMovies] = useState([]);
   const [featured, setFeatured] = useState([]);
-  const [hasMore, sethasMore] = useState(true);
+  // const [hasMore, sethasMore] = useState(true);
   const [page, setPage] = useState(2);
   
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function MoviesProvider({ children }) {
       .then(data => setMovies(data));
 
 
-      fetch('/api/Movies/featured?_page=${page}&_limit=10')
+    fetch('/api/Movies/featured')
       .then(response => response.json())
       .then(data => setFeatured(data));
 
@@ -25,7 +25,7 @@ export default function MoviesProvider({ children }) {
 
   const fetchFeatured = async () => {
     const res = await fetch(
-      '/api/Movies/featured?_page=${page}&_limit=10'
+      '/api/Movies/featured'
     );
     const data = await res.json();
     return data;
@@ -35,9 +35,9 @@ export default function MoviesProvider({ children }) {
     const featuredFormServer = await fetchFeatured();
 
     setFeatured([...featured, ...featuredFormServer]);
-    if (featuredFormServer.length === 0 || featuredFormServer.length < 10) {
-      sethasMore(false);
-    }
+    // if (featuredFormServer.length === 0 || featuredFormServer.length < 10) {
+    //   sethasMore(false);
+    // }
     setPage(page + 1);
   };
 
@@ -48,8 +48,8 @@ export default function MoviesProvider({ children }) {
       featured,
       fetchFeatured,
       fetchData,
-      hasMore,
-      sethasMore,
+      // hasMore,
+      // sethasMore,
       page,
       setPage
     }}>

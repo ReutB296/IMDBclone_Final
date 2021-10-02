@@ -14,6 +14,7 @@ import Gallery from "./FeaturedToday/Gallery";
 import UsersProvider from "./User.context";
 import SignIn from './SignIn';
 import CreateAccount from './CreateAccount';
+import './main.css';
 
 
 export default function Main(){
@@ -23,15 +24,12 @@ return(
     <Router>
       <MoviesProvider>
         <UsersProvider>
-        <div className='grid-header'>
-                  <NavHeader />
-          </div>
       <Switch>
   
           <Route path="/signin" exact>
-          {/* <div className='grid-header'>
+          <div className='grid-header'>
                   <NavHeader />
-          </div> */}
+          </div>
           <div className='grid-signIn'>
             <SignIn/>
           </div>
@@ -45,35 +43,38 @@ return(
             <div className='grid-MovieToday'>
                 <MovieToday />
             </div>
-            {/* <div className='grid-header'>
+            <div className='grid-header'>
                   <NavHeader />
-            </div> */}
+            </div>
           </Route>
+
           <Route path='/gallery'>
-          {/* <div className='grid-header'>
+          <div className='grid-header'>
                   <NavHeader />
-          </div> */}
+          </div>
             <Gallery />
           </Route>
+
           <Route path="/" exact>
             <div className='grid-trailers'>
                 <Trailers />
                 <img className= "upNext" src={upNext}/>
             </div>
                 <FeaturedToday />
-            {/* <div className='grid-header'>
+            <div className='grid-header'>
                   <NavHeader />
-            </div> */}
+            </div>
           </Route>
 
           <Route path="/:id">
             <Trailer />
-            {/* <div className='grid-header'>
+            <div className='grid-header'>
                   <NavHeader />
-            </div> */}
+            </div>
           </Route>
 
           </Switch>
+          
           </UsersProvider>
         </MoviesProvider>
       </Router>
