@@ -82,7 +82,7 @@ app.post('/api/login', async (req, res) => {
 
 app.use(express.static('../Client/imdb/build/'));
 app.get('/*', function(req,res){
-    res.sendFile(path.join(_dirname, '../Client/imdb/build', 'index.html'));
+    res.sendFile(path.join(__dirname, '../Client/imdb/build', 'index.html'));
 });
 
 const port = process.env.PORT || 8080;
