@@ -81,7 +81,7 @@ app.post('/api/login', async (req, res) => {
 })
 
 app.use(express.static('../Client/imdb/build/'));
-app.get('/*', function(req,res){
+app.get('*', function(req,res){
     res.sendFile(path.join(__dirname, '../Client/imdb/public/index.html'));
 });
 
