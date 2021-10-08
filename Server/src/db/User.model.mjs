@@ -25,7 +25,7 @@ export const userSchema = new mongoose.Schema({
             },
             message: prop => `${prop.value} is an invalid password!`,
         },
-        select: false,
+        select: false,  //Exclude password on select 
     },
     wishlist:  [Number],
     signUpDate: {
