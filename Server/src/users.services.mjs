@@ -29,19 +29,6 @@ export async function addToWishlist(id, movieId){
 }
 
 
-// export async function editUser(id, movieId) {
-//     const user = await getUserID(id);
-//     if (user){
-//         user.wishlist.push(movieId);
-//         return user.save();
-//     }else console.log('No user');
- 
-
-//     // return User.findOneAndUpdate(
-//     //     {_id: ObjectId(id)},
-//     //     newUser
-//     // );
-// }
 
 export async function addUser(user) {
     const newUser = new User(user);
@@ -52,10 +39,6 @@ export async function getUserID(id) {
     return User.findOne({_id: ObjectId(id)});
 }
 
-
-// export async function getUser(email) {
-//     return User.findOne({email: email});
-// }
 
 export async function signup(email, username, password) {
     const newUser = new User({email, username, password});

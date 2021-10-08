@@ -12,7 +12,7 @@ import {
 import ReactPaginate from 'react-paginate';
 
 
-export default function Reviews({selectedMovie, movieIndex}){
+export default function Reviews({selectedMovie}){
     console.log("selectedMovie from Reviews", selectedMovie)
     
 
@@ -45,9 +45,6 @@ export default function Reviews({selectedMovie, movieIndex}){
           .then(response => response.json())
           .then(data => {
               setResult(data);
-            //   const review = data.reviews[data.reviews.length - 1];
-            //   addReviewInternal(movieIndex, review);
-
             }).catch(err => {
                 console.log(err)
                 localStorage.clear();
@@ -134,17 +131,6 @@ export default function Reviews({selectedMovie, movieIndex}){
                         required: "Required",
                      })} 
                      />
-                    {/* <input
-                        className="comments"
-                        type="text"
-                        autoComplete= "off"
-                        onKeyPress={e => {
-                            if (e.key === 'Enter') e.preventDefault();
-                          }}
-                        {...register("comments", {
-                        required: "Required",
-                        })}
-                    /> */}
         
                     <button type="submit">Submit</button>
                 </form>

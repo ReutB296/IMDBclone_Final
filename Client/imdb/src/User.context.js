@@ -7,7 +7,6 @@ export function getToken() {
   return localStorage.getItem('auth')
 }
 
-// const decoded =  jwt.decode(getToken(), {complete: true});
 const decoded =  jwt.decode(getToken());
 
 export default function UsersProvider({ children }) {

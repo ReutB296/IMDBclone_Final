@@ -12,8 +12,7 @@ export default function Trailers(){
 
 
   return Array.isArray(movies) && movies.length > 0 ? (
-    //   <div className="carouselContainer">
-            <Carousel interval={5000000000} nextLabel={null} prevLabel={null} keyboard={false}>
+            <Carousel interval={5000} nextLabel={null} prevLabel={null} keyboard={false}>
                 {movies.map(movie => {
                     return(
                         <Carousel.Item>
@@ -42,7 +41,6 @@ export default function Trailers(){
                     ) 
                 })}
             </Carousel>
-    // </div>
   )
   : <div className="loading"> Loading... </div>
 }

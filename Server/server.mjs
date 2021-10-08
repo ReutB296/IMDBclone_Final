@@ -7,7 +7,6 @@ import {signup} from './src/users.services.mjs';
 import jwt from 'jsonwebtoken';
 import {MoviesRouter} from './src/movies.routs.mjs';
 import { usersRouter } from './src/users.routs.mjs';
-//import { FeaturedRouter } from './src/Featured.routs.mjs';
 import { addReview } from './src/movies.services.mjs';
 import 'express-async-errors';
 
@@ -20,7 +19,6 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api/Movies', MoviesRouter);
-// app.use('/api/Movies/featured', FeaturedRouter);
 app.use('/api/users', usersRouter);
 
 const Auth =(req, res, next) => {
@@ -83,6 +81,9 @@ app.post('/api/login', async (req, res) => {
 })
 
 app.use(express.static('../Client/imdb/build/'));
+app.get('/*', function(req,res){
+    res.sendFile(path.join(_dirname, '../Client/imdb/build', 'index.html'));
+});
 
 const port = process.env.PORT || 8080;
 app.listen(port);

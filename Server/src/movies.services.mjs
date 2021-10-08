@@ -1,7 +1,4 @@
-import mongo from 'mongodb';
 import { Movie } from './db/Movies.model.mjs';
-//import { query } from 'express';
-//const { ObjectId } = mongo;
 import 'express-async-errors';
 import { getUserID } from './users.services.mjs';
 
@@ -9,7 +6,6 @@ import { getUserID } from './users.services.mjs';
 export function getMovies() {
     return Movie
     .find()
-    // .sort({ reviews: 'ascending' })
     .populate({
         path: 'reviews',
         populate: {
@@ -23,22 +19,6 @@ export function getFeatured() {
     .find({vote_average: {$gt: 7}});
 }
 
-// export function getMovies(filter={}) {
-
-//     const query = {};
-//     let page = 1;
-//     let limit = 10;
-
-//     if (filter.page) {
-//         page = parseInt(filter.page);
-//     }
-//     if (filter.limit) {
-//         limit = parseInt(filter.limit);
-//     }
-
-//     return Movie
-//     .paginate(query, {page, limit});
-// }
 
 export function getMovie(id) {
     return Movie.findOne({id: id}).populate({
@@ -48,7 +28,6 @@ export function getMovie(id) {
         }
     });
 }
-
 
 
 export async function addReview(movieID, review) {

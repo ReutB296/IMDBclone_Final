@@ -110,8 +110,6 @@ const MoviesSchema = new mongoose.Schema({
 
  
 export const Movie = mongoose.model('Movie', MoviesSchema);
-//export const Featured = mongoose.model('Featured', MoviesSchema);
-// MoviesSchema.plugin(autopopulate);
 
 
 

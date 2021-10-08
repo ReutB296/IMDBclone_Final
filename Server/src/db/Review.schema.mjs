@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import autopopulate from 'mongoose-autopopulate';
 
 export const reviewSchema = new mongoose.Schema({
         body: {
@@ -28,8 +27,6 @@ export const reviewSchema = new mongoose.Schema({
         }
 });
 
-// reviewSchema.plugin(autopopulate);
 
-// export const review = mongoose.model('review', reviewSchema);
 
 
