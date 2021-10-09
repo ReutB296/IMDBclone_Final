@@ -81,8 +81,8 @@ app.post('/api/login', async (req, res) => {
 })
 
 app.use(express.static('../Client/imdb/build/'));
-app.get('*', function(req,res){
-    res.sendFile(path.join(__dirname, '../Client/imdb/build', '/index.html'));
+app.get('/*', function(req,res){
+    res.sendFile(path.join(__dirname, '../Client/imdb/public/', 'index.html'));
 });
 
 // app.use(express.static(__dirname + '/'));
