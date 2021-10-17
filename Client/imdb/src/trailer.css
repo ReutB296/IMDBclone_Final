@@ -15,7 +15,7 @@
 
 .backContainer {
   background-color: black;
-  width: 850px;
+  /* width: 850px; */
   height: 48px;
   z-index: 1;
   padding-top: 12px;

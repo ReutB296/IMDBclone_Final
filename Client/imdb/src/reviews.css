@@ -119,7 +119,7 @@
   }
 
 .reviews-container .reviews-list{
-  width: 800px;
+  max-width: 800px;
   margin: auto;
   border-radius: 12px;
   border: 1px solid #E8E8E8;
@@ -190,7 +190,31 @@
 @media (max-width: 1200px){
   .reviews-container{
     top: 720px;
+    max-width: 100vw;
   }
+
+}
+
+@media screen and (max-width: 480px){
+  .paginationBttns {
+    padding: 0;
+  }
+  
+  .paginationBttns li{
+    display: none;
+  }
+
+    .paginationBttns .previous, .paginationBttns .next{
+      display:inherit;
+  }
+
+    .paginationBttns .previous a, .paginationBttns .next a{
+      background-color: inherit;
+      color: black;
+      border: none;
+      margin: 0;
+  }
+
 }
 
   

@@ -1,6 +1,6 @@
 .list-item{
     background: #f6f6f5;
-    width: 590px;
+    max-width: 590px;
     height: fit-content;
     font-family: Verdana, Arial, sans-serif;
     margin: auto;
