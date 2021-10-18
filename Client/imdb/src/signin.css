@@ -1,8 +1,8 @@
 .signIn-container{
 font-family: verdana, Arial, sans-serif;
  background-color: white;
- width: 1008px;
- height: 613px;
+ max-width: 1008px;
+ min-height: 613px;
  margin: auto;
  display: flex;
  gap: 10px;
@@ -18,8 +18,8 @@ border-left: 1px solid #dddddd;
 padding-left: 25px;
 margin-top: 30px;
 margin-right: 100px;
-width: 445px;
-height: 270px;
+max-width: 445px;
+min-height: 270px;
 }
 
 .perks h1{
@@ -59,7 +59,7 @@ font-size: 13px;
 }
 
 .signin-createAccount-container form input{
-    width: 312px;
+    max-width: 312px;
     height: 31px;
     margin-bottom: 30px;
     border: 1px solid #a6a6a6;
@@ -93,7 +93,7 @@ font-size: 13px;
 .signin-createAccount-container form .message{
     border: 1px solid #c40000;
     border-radius: 4px;
-    width: 312px;
+    max-width: 312px;
     height: 52px;
     text-align: center;
     padding-top: 10px;
@@ -154,6 +154,52 @@ font-size: 13px;
 .text-center small{
     font-family: Verdana, sans-serif;
     font-size: 10.4px;
+}
+
+@media screen and (max-width: 768px){
+    .perks{
+        display: none;
+    }
+
+    .signIn-container{
+        justify-content: center;
+    }
+
+    .signin-createAccount-container{
+        max-width: 100%;
+    }
+
+    .signin-createAccount-container button{
+        max-width: 242px;
+        min-height: 34px;
+        margin-left: 0;
+        width: 100%;
+        height: inherit;
+    }
+
+    .text-center{
+        max-width: 240px;
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .divider-text{
+        margin-left: 0;
+        width: inherit;
+    }
+
+    .divider-text span::before, .divider-text span::after {
+        display: none;
+    }
+
+    .divider-text span{
+        max-width: 15px;
+        margin: auto;
+        display: block;
+    }
+
 }
 
 

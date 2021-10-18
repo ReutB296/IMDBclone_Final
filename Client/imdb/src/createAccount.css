@@ -28,16 +28,17 @@
     padding: 14px 18px;
     font-size: 13px;
     border: 1px #ddd solid;
-    width: 348px;
-    height: 462px;
+    max-width: 348px;
+    min-height: 462px;
     margin-top: 10px;
+    width: 100%;
 }
 
 .createAccount-container form .form-divider{
     margin-top: 20px;
     padding-top: 40px;
     height: 44px;
-    width: 312px;
+    max-width: 312px;
     background: linear-gradient(to bottom,rgba(0,0,0,.14),rgba(0,0,0,.03) 3px,transparent);
 }
 
@@ -56,12 +57,13 @@
 }
 
 .createAccount-container form input{
-    width: 312px;
+    max-width: 312px;
     height: 31px;
     border: 1px solid #a6a6a6;
     border-radius: 3px;
     margin-bottom: 15px;
     padding-left: 5px;
+    width: 100%;
 }
 
 .createAccount-container form input:focus{
@@ -71,8 +73,8 @@
 }
 
 .createAccount-container form button{
-    width: 312px;
-    height: 31px;
+    max-width: 312px;
+    min-height: 31px;
     background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
     border-color: #a88734 #9c7e31 #846a29;
     border-style: solid;
