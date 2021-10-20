@@ -16,6 +16,8 @@ export default function MovieToday() {
  
     return(
         <div className='movie-today'>
+            { currentMovie ?
+            <>
     {/* Name and rating - top ----------------------------- */}
         <div className='rating-root'>
             <div className='movie-today-header'>
@@ -70,9 +72,12 @@ export default function MovieToday() {
             </div>
 
         </div>
+        </>
+        :
+        "Loading..."
+        }
         </div>
   
-        //</Link>
         
 
         

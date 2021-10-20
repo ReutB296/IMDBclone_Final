@@ -52,7 +52,7 @@ html {
 
 .grid-MovieToday {
   grid-area: trailers;
-  width: fit-content;
+  max-width: 100vw;
   margin: auto;
 }
 
@@ -71,9 +71,17 @@ html {
 }
 
 
- @media screen and (max-width: 1280px){
-  .grid-header {
-  
+@media screen and (min-width: 976px) and (max-width: 1200px){
+  .grid-MovieToday {
+    margin-top: 30px;
+    margin-left: 50px;
+  }
+}
+
+@media screen and  (max-width: 975px){
+  .grid-MovieToday {
+    margin-top: 30px;
+    margin-left: 5px;
   }
 }
 
