@@ -207,6 +207,11 @@ div.active.carousel-item {
     display: none;
   }
 
+  .carousel-inner .poster .plus::before{
+    display: none;
+    
+  }
+
   .carousel-inner .poster::before{
     display: none;
   }

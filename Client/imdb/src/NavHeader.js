@@ -32,6 +32,12 @@ const theme = {
  margin-left: 20px;
  `;
 
+ const Logo = styled.img`
+ height: 32px;
+ width: 64px;
+ `;
+
+
  const HeaderContainer = styled.header
  `height: 100%;
  max-width: 1280px;
@@ -62,6 +68,17 @@ const theme = {
             display: none;
         }
     }
+
+    @media screen and (max-width: 480px){
+        gap:0;
+
+       ${Logo}{
+        max-width: 64px;
+        max-height: 32px;
+       }
+      
+    }
+
 
    
  `;
@@ -145,11 +162,6 @@ width: 100%;
 outline: none;
 background-color: transparent;
 `;
-
- const Logo = styled.img`
- height: 32px;
- width: 64px;
- `;
 
  const SearchArea = styled.div`
  flex: 1;
