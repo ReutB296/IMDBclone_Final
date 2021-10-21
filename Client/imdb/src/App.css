@@ -89,5 +89,9 @@ html {
   .App{
     grid-template-rows: 55px auto ;
   }
+
+  .grid-trailers{
+    margin-bottom: 30px;
+  }
 }
 
